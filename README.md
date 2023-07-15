@@ -22,6 +22,8 @@ Qwiic_SCMD_Py
 
 <img src="https://cdn.sparkfun.com//assets/parts/1/4/0/2/9/15451-SparkFun_Qwiic_Motor_Driver-01.jpg"  align="right" width=300>
 
+**Initial Port. Untested**
+
 CircuitPython module for the [qwiic motor driver](https://www.sparkfun.com/products/15451)
 
 This python package is a port of the existing [QWiic_SCMD_Py Library](https://github.com/sparkfun/Qwiic_SCMD_Py), which is a port of [SparkFun Serial Controlled Motor Driver Arduino Library](https://github.com/sparkfun/SparkFun_Serial_Controlled_Motor_Driver_Arduino_Library)
