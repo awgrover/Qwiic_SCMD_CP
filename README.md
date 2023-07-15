@@ -5,7 +5,7 @@ Qwiic_SCMD_Py
    <img src="https://cdn.sparkfun.com/assets/custom_pages/2/7/2/qwiic-logo-registered.jpg"  width=200>  
    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"  width=240>   
 </p>
-<p align="center">
+<!--p align="center">
 	<a href="https://pypi.org/project/sparkfun-qwiic-scmd/" alt="Package">
 		<img src="https://img.shields.io/pypi/pyversions/sparkfun_qwiic_scmd.svg" /></a>
 	<a href="https://github.com/sparkfun/Qwiic_SCMD_Py/issues" alt="Issues">
@@ -18,15 +18,13 @@ Qwiic_SCMD_Py
         	<img src="https://img.shields.io/twitter/follow/sparkfun.svg?style=social&logo=twitter"
            	 alt="follow on Twitter"></a>
 	
-</p>
+</p-->
 
 <img src="https://cdn.sparkfun.com//assets/parts/1/4/0/2/9/15451-SparkFun_Qwiic_Motor_Driver-01.jpg"  align="right" width=300>
 
-Python module for the [qwiic motor driver](https://www.sparkfun.com/products/15451)
+CircuitPython module for the [qwiic motor driver](https://www.sparkfun.com/products/15451)
 
-This python package is a port of the existing [SparkFun Serial Controlled Motor Driver Arduino Library](https://github.com/sparkfun/SparkFun_Serial_Controlled_Motor_Driver_Arduino_Library)
-
-This package can be used in conjunction with the overall [SparkFun qwiic Python Package](https://github.com/sparkfun/Qwiic_Py)
+This python package is a port of the existing [QWiic_SCMD_Py Library](https://github.com/sparkfun/Qwiic_SCMD_Py), which is a port of [SparkFun Serial Controlled Motor Driver Arduino Library](https://github.com/sparkfun/SparkFun_Serial_Controlled_Motor_Driver_Arduino_Library)
 
 New to qwiic? Take a look at the entire [SparkFun qwiic ecosystem](https://www.sparkfun.com/qwiic).
 
@@ -39,59 +37,24 @@ New to qwiic? Take a look at the entire [SparkFun qwiic ecosystem](https://www.s
 
 Supported Platforms
 --------------------
-The qwiic Python package current supports the following platforms:
-* [Raspberry Pi](https://www.sparkfun.com/search/results?term=raspberry+pi)
-* [NVidia Jetson Nano](https://www.sparkfun.com/products/15297)
-* [Google Coral Development Board](https://www.sparkfun.com/products/15318)
+The qwiic Python package current supports most CircuitPython devices.
 
 Dependencies 
 -------------
-This driver package depends on the qwiic I2C driver: 
-[Qwiic_I2C_Py](https://github.com/sparkfun/Qwiic_I2C_Py)
 
 Documentation
 -------------
-The SparkFun qwiic SCMD module documentation is hosted at [ReadTheDocs](https://qwiic-scmd-py.readthedocs.io/en/latest/index.html)
+You can use the original SparkFun qwiic SCMD module documentation hosted at [ReadTheDocs](https://qwiic-scmd-py.readthedocs.io/en/latest/index.html)
 
 Installation
 ---------------
-### PyPi Installation
-This repository is hosted on PyPi as the [sparkfun-qwiic-scmd](https://pypi.org/project/sparkfun-qwiic-scmd/) package. On systems that support PyPi installation via pip, this library is installed using the following commands
 
-For all users (note: the user must have sudo privileges):
-```sh
-sudo pip install sparkfun-qwiic-scmd
-```
-For the current user:
+Do the typical copy of `Qwiic_SCMD_CP/` to `CIRCUITPY/lib`. You just need to include `__init__.py`, the other files are extra.
 
-```sh
-pip install sparkfun-qwiic-scmd
-```
+Example Use
+-------------
 
-### Local Installation
-To install, make sure the setuptools package is installed on the system.
-
-Direct installation at the command line:
-```sh
-python setup.py install
-```
-
-To build a package for use with pip:
-```sh
-python setup.py sdist
- ```
-A package file is built and placed in a subdirectory called dist. This package file can be installed using pip.
-```sh
-cd dist
-pip install sparkfun_qwiic_scmd-<version>.tar.gz
-  
-```
- Example Use
- -------------
- ```
- TBD
- 
- ```
+See the `examples/` dir.
 
 <p align="center">
 <img src="https://cdn.sparkfun.com/assets/custom_pages/3/3/4/dark-logo-red-flame.png" alt="SparkFun - Start Something">

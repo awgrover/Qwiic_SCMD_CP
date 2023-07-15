@@ -1,2 +1,2 @@
-m2r
+circuitpython > 6.x
 sparkfun-qwiic-i2c
