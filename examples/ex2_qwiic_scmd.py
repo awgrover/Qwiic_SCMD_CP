@@ -5,6 +5,7 @@
 #
 # Written by Mark Lindemer
 # SparkFun Electronics, April 2020
+# Ported by Alan Grover 2023
 # 
 # This python library supports the SparkFun Electroncis qwiic 
 # qwiic sensor/board ecosystem on a Raspberry Pi (and compatable) single
@@ -38,55 +39,42 @@
 # Example 1
 #
 
-from __future__ import print_function
 import time
 import sys
-import math
-import qwiic_scmd
+from Qwiic_SCMD_CP import QwiicScmd
 
-myMotor = qwiic_scmd.QwiicScmd()
+myMotor = QwiicScmd()
 
-def runExample():
-	print("Motor Test.")
-	R_MTR = 0
-	L_MTR = 1
-	FWD = 0
-	BWD = 1
+print("Motor Test.")
+R_MTR = 0
+L_MTR = 1
+FWD = 0
+BWD = 1
 
-	if myMotor.connected == False:
-		print("Motor Driver not connected. Check connections.", \
-			file=sys.stderr)
-		return
-	myMotor.begin()
-	print("Motor initialized.")
-	time.sleep(.250)
-	
-	# Zero Motor Speeds
-	myMotor.set_drive(0,0,0)
-	myMotor.set_drive(1,0,0)
-	
-	myMotor.enable()
-	print("Motor enabled")
-	time.sleep(.250)
+if myMotor.connected == False:
+        print("Motor Driver not connected. Check connections.")
+        sys.exit()
+myMotor.begin()
+print("Motor initialized.")
+time.sleep(.250)
 
+# Zero Motor Speeds
+myMotor.set_drive(0,0,0)
+myMotor.set_drive(1,0,0)
 
-	while True:
-		speed = 20
-		for speed in range(20,255):
-			print(speed)
-			myMotor.set_drive(R_MTR,FWD,speed)
-			myMotor.set_drive(L_MTR,BWD,speed)
-			time.sleep(.05)
-		for speed in range(254,20, -1):
-			print(speed)
-			myMotor.set_drive(R_MTR,FWD,speed)
-			myMotor.set_drive(L_MTR,BWD,speed)
-			time.sleep(.05)
+myMotor.enable()
+print("Motor enabled")
+time.sleep(.250)
 
-if __name__ == '__main__':
-	try:
-		runExample()
-	except (KeyboardInterrupt, SystemExit) as exErr:
-		print("Ending example.")
-		myMotor.disable()
-		sys.exit(0)
+while True:
+        speed = 20
+        for speed in range(20,255):
+                print(speed)
+                myMotor.set_drive(R_MTR,FWD,speed)
+                myMotor.set_drive(L_MTR,BWD,speed)
+                time.sleep(.05)
+        for speed in range(254,20, -1):
+                print(speed)
+                myMotor.set_drive(R_MTR,FWD,speed)
+                myMotor.set_drive(L_MTR,BWD,speed)
+                time.sleep(.05)
