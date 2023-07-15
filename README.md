@@ -3,7 +3,7 @@ Qwiic_SCMD_Py
 
 <p align="center">
    <img src="https://cdn.sparkfun.com/assets/custom_pages/2/7/2/qwiic-logo-registered.jpg"  width=200>  
-   <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"  width=240>   
+   <img src="https://s3.amazonaws.com/adafruit-circuit-python/CircuitPython_Repo_header_logo.png"  width=240>   
 </p>
 <!--p align="center">
 	<a href="https://pypi.org/project/sparkfun-qwiic-scmd/" alt="Package">
@@ -55,7 +55,3 @@ Example Use
 -------------
 
 See the `examples/` dir.
-
-<p align="center">
-<img src="https://cdn.sparkfun.com/assets/custom_pages/3/3/4/dark-logo-red-flame.png" alt="SparkFun - Start Something">
-</p>
